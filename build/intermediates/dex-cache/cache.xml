@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="/Users/Julian/Downloads/bluetoothAndroid/app/build/intermediates/exploded-aar/com.android.support/support-fragment/24.2.1/jars/libs/internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="5f64d657e838e8375135c0f6057a7ff8fab6a50e">
+        <dex dex="/Users/Julian/Downloads/bluetoothAndroid/app/build/intermediates/pre-dexed/debug/internal_impl-24.2.1_df944a5d62545ce45baaa3b6464ee05e5f843ec1.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/Julian/Downloads/bluetoothAndroid/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="672aef18eda39e7b88c10e208ba4cefe8e89d4ad">
+        <dex dex="/Users/Julian/Downloads/bluetoothAndroid/app/build/intermediates/pre-dexed/debug/instant-run-bootstrap_b808b029f7db4a7632d3631a974693f72826d5a6.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/Julian/Downloads/bluetoothAndroid/app/build/intermediates/exploded-aar/com.android.support/support-compat/24.2.1/jars/libs/internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="7e4389bd133359a2ff88623ff1e4ff93d6e6f780">
+        <dex dex="/Users/Julian/Downloads/bluetoothAndroid/app/build/intermediates/pre-dexed/debug/internal_impl-24.2.1_53e4e8f95f13f1332b1d29e8a258d93d71fa509a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/Julian/Downloads/bluetoothAndroid/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="9bc9f2674883eceba3af4d6044b3490e48bc8a4f">
+        <dex dex="/Users/Julian/Downloads/bluetoothAndroid/app/build/intermediates/pre-dexed/debug/instant-run_10b597a10d3102e3ef0820f1ef3c305b3369ba4b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/Julian/Downloads/bluetoothAndroid/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/24.2.1/jars/libs/internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="fbf8da429efd5ad21e02e3e5ecaa1efc4167878d">
+        <dex dex="/Users/Julian/Downloads/bluetoothAndroid/app/build/intermediates/pre-dexed/debug/internal_impl-24.2.1_7b05c27500394284485b16034a33b4ce2135b096.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/Julian/Downloads/bluetoothAndroid/app/build/intermediates/exploded-aar/com.android.support/support-compat/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="0ecb4b595fa0f0f8018a149ace3ea6525624f94e">
+        <dex dex="/Users/Julian/Downloads/bluetoothAndroid/app/build/intermediates/pre-dexed/debug/com.android.support-support-compat-24.2.1_9f4fc37ce7114e1fdb55227d43207eeb10d96dc0.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/Julian/Downloads/bluetoothAndroid/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="9c4c3bc902450c39ed54de170db4fb12aea20a35">
+        <dex dex="/Users/Julian/Downloads/bluetoothAndroid/app/build/intermediates/pre-dexed/debug/com.android.support-support-core-utils-24.2.1_75a9885363f76ec73652cd9c95e9895c7cc0d96c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Applications/Android Studio.app/Contents/gradle/m2repository/com/google/code/gson/gson/2.2.4/gson-2.2.4.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="a60a5e993c98c864010053cb901b7eab25306568">
+        <dex dex="/Users/Julian/Downloads/bluetoothAndroid/app/build/intermediates/pre-dexed/debug/gson-2.2.4_d0ce76b63ce905fbab3c5d385c8e1b8692010f19.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/Julian/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/24.2.1/support-annotations-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="8de3aafecbdf98a61db6427f008f2d515bcd2544">
+        <dex dex="/Users/Julian/Downloads/bluetoothAndroid/app/build/intermediates/pre-dexed/debug/support-annotations-24.2.1_d94420bb2c6913a9aa734366dc762ec06fd59124.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/Julian/Downloads/bluetoothAndroid/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="43b2dba6b5a0b14527961b75329d0b90025f15ea">
+        <dex dex="/Users/Julian/Downloads/bluetoothAndroid/app/build/intermediates/pre-dexed/debug/com.android.support-appcompat-v7-24.2.1_db4a5b034bf5b764a02e1c9fcb4dfb2ce3a0d335.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/Julian/Downloads/bluetoothAndroid/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="d5c731fc64c03dfe04d51134955b483551c35849">
+        <dex dex="/Users/Julian/Downloads/bluetoothAndroid/app/build/intermediates/pre-dexed/debug/com.android.support-support-vector-drawable-24.2.1_3c31809f38032e9ff82aa42ce3fcebaa519bc4e2.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/Julian/Downloads/bluetoothAndroid/app/build/intermediates/exploded-aar/com.android.support/support-fragment/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="b9a1ac78ad7ef3abedc4a4b30cd92bcacb939d1f">
+        <dex dex="/Users/Julian/Downloads/bluetoothAndroid/app/build/intermediates/pre-dexed/debug/com.android.support-support-fragment-24.2.1_bc861018a07b21309af98daede7c84c72e72434f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/Julian/Downloads/bluetoothAndroid/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="09b462bbcb77650284bd6614f1a32f360ef369f8">
+        <dex dex="/Users/Julian/Downloads/bluetoothAndroid/app/build/intermediates/pre-dexed/debug/com.android.support-support-media-compat-24.2.1_d9b246d168458e322ffd8fa6fb7c2130c8981408.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/Julian/Downloads/bluetoothAndroid/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/24.2.1/jars/libs/internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="935a969265b2a166b2d20415423f5f6e90fe16e0">
+        <dex dex="/Users/Julian/Downloads/bluetoothAndroid/app/build/intermediates/pre-dexed/debug/internal_impl-24.2.1_8100fe46b0beebdf2596200456f0cf3614fd60be.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/Julian/Downloads/bluetoothAndroid/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/24.2.1/jars/libs/internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="867dad63c33388ff8c7644b236579355036d075f">
+        <dex dex="/Users/Julian/Downloads/bluetoothAndroid/app/build/intermediates/pre-dexed/debug/internal_impl-24.2.1_c2f6ba5e1aa7ee35ec8c469805e29d16bed13b55.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/Julian/Downloads/bluetoothAndroid/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="94bc1dfb84dcc8b6f6f8f7cc726d7b2dd39c1574">
+        <dex dex="/Users/Julian/Downloads/bluetoothAndroid/app/build/intermediates/pre-dexed/debug/com.android.support-animated-vector-drawable-24.2.1_e5444f727abf2d4ee2756add8a0c1d68e5cb923e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/Julian/Downloads/bluetoothAndroid/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="e7f3132168957eefc46229fc32c3bd464642b71e">
+        <dex dex="/Users/Julian/Downloads/bluetoothAndroid/app/build/intermediates/pre-dexed/debug/com.android.support-support-core-ui-24.2.1_49c22d117a800193b92b24cce5f75292c293a39a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/Julian/Downloads/bluetoothAndroid/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="/Users/Julian/Downloads/bluetoothAndroid/app/build/intermediates/pre-dexed/debug/com.android.support-support-v4-24.2.1_833efa1bea308796143b0598bddf1eb061685998.jar" />
+    </item>
+
+</items>

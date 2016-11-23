@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:id="@+id/activity_display_sensors"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:paddingBottom="@dimen/activity_vertical_margin"
+android:paddingLeft="@dimen/activity_horizontal_margin"
+android:paddingRight="@dimen/activity_horizontal_margin"
+android:paddingTop="@dimen/activity_vertical_margin"
+tools:context="com.example.julian.bluetoothandroid.DisplaySensors">
+
+<!--<TextView-->
+<!--android:layout_width="wrap_content"-->
+<!--android:layout_height="wrap_content"-->
+<!--android:text="Hello World!"-->
+<!--android:id="@+id/textView" />-->
+
+<!--// android:layout_below="@+id/textView"-->
+<RadioGroup
+    android:id="@+id/sensorOptions"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <RadioButton
+        android:text="Wave Height:"
+        android:layout_width="wrap_content"
+        android:layout_height="52dp"
+        android:id="@+id/radioWave"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textSize="22sp"
+        />
+
+
+    <RadioButton
+        android:text="Air Temp:"
+        android:layout_width="wrap_content"
+        android:layout_height="46dp"
+        android:layout_below="@+id/radioWave"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/radioAir"
+        android:textSize="22sp"/>
+
+    <RadioButton
+        android:text="Water Temp:"
+        android:layout_width="wrap_content"
+        android:layout_height="47dp"
+        android:id="@+id/radioWater"
+        android:layout_below="@+id/radioAir"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textSize="22sp"/>
+
+    <RadioButton
+        android:text="Salinity Level:"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:id="@+id/radioSalt"
+        android:layout_below="@+id/radioWater"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textSize="22sp"/>
+
+    <RadioButton
+        android:text="Air Speed: "
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_below="@+id/radioSalt"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/radioSpeed"
+        android:textSize="22sp"/>
+</RadioGroup>
+
+
+<TextView
+    android:text="TextViewAir"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/textViewAir"
+    android:textSize="22sp"
+    android:textAlignment="center"
+    android:layout_marginTop="21dp"
+    android:layout_below="@+id/textViewWave"
+    android:layout_toRightOf="@+id/sensorOptions"
+    android:layout_toEndOf="@+id/sensorOptions" />
+
+<TextView
+    android:text="TextViewWave"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/textViewWave"
+    android:textSize="22sp"
+    android:textAlignment="center"
+    android:layout_alignParentTop="true"
+    android:layout_alignParentRight="true"
+    android:layout_alignParentEnd="true"
+    android:layout_marginTop="14dp"
+    android:layout_toRightOf="@+id/sensorOptions"
+    android:layout_toEndOf="@+id/sensorOptions" />
+
+<TextView
+    android:text="TextViewWater"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/textViewWater"
+    android:textSize="22sp"
+    android:textAlignment="center"
+    android:layout_below="@+id/textViewAir"
+    android:layout_alignParentRight="true"
+    android:layout_alignParentEnd="true"
+    android:layout_marginTop="22dp"
+    android:layout_toRightOf="@+id/sensorOptions"
+    android:layout_toEndOf="@+id/sensorOptions" />
+
+<TextView
+    android:text="TextViewSalt"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/textViewSalt"
+    android:textSize="22sp"
+    android:textAlignment="center"
+    android:layout_below="@+id/textViewWater"
+    android:layout_alignParentRight="true"
+    android:layout_alignParentEnd="true"
+    android:layout_marginTop="19dp"
+    android:layout_toRightOf="@+id/sensorOptions"
+    android:layout_toEndOf="@+id/sensorOptions" />
+
+<Button
+    android:text="Collect Data"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/collectData"
+    android:layout_below="@+id/sensorOptions"
+    android:layout_toLeftOf="@+id/textViewSpeed"
+    android:layout_toStartOf="@+id/textViewSpeed"
+    android:layout_marginTop="43dp" />
+
+<Button
+    android:text="Previous"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/previousReading"
+    android:layout_marginRight="41dp"
+    android:layout_marginEnd="41dp"
+    android:layout_alignBaseline="@+id/collectData"
+    android:layout_alignBottom="@+id/collectData"
+    android:layout_alignParentRight="true"
+    android:layout_alignParentEnd="true" />
+
+<TextView
+    android:text="TextViewSpeed"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/textViewSpeed"
+    android:textSize="22sp"
+    android:textAlignment="center"
+    android:layout_alignBottom="@+id/sensorOptions"
+    android:layout_alignParentRight="true"
+    android:layout_alignParentEnd="true"
+    android:layout_marginBottom="13dp"
+    android:layout_toRightOf="@+id/sensorOptions"
+    android:layout_toEndOf="@+id/sensorOptions" />
+
+    <Button
+        android:text="3D View"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:id="@+id/view3D"
+        android:layout_below="@+id/collectData"
+        android:layout_centerHorizontal="true" />
+
+
+</RelativeLayout>
