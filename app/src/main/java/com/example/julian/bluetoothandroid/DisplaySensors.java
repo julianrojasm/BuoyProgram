@@ -26,6 +26,8 @@ import java.util.UUID;
 import static com.example.julian.bluetoothandroid.MainActivity.btAdapter;
 import static com.example.julian.bluetoothandroid.MainActivity.deviceList;
 import static com.example.julian.bluetoothandroid.MainActivity.mDevice;
+import static com.example.julian.bluetoothandroid.Obj3DView.pitch;
+import static com.example.julian.bluetoothandroid.Obj3DView.roll;
 
 public class DisplaySensors extends AppCompatActivity
 {
@@ -43,7 +45,8 @@ public class DisplaySensors extends AppCompatActivity
     final int handlerStateSpeed = 2;
     final int handlerStateSalinity = 3;
     final int handlerStateWave = 4;
-    Handler bluetoothIn;
+    final int handlerRotation= 5;
+    public static Handler bluetoothIn;
     private static final UUID MY_UUID = UUID.fromString("00001101-0000-1000-8000-00805f9b34fb");
 
 
@@ -55,7 +58,7 @@ public class DisplaySensors extends AppCompatActivity
 
 
     ConnectThread mConnectThread = null;
-    ConnectedThread mConnectedThread = null;
+    static ConnectedThread mConnectedThread = null;
 
 
 
@@ -187,6 +190,43 @@ public class DisplaySensors extends AppCompatActivity
 
                         waveHeight.setText(recDataString);
                 }
+
+                if (msg.what == handlerRotation) {
+
+                    String readMessage = new String(writeBuff);
+                    String stringVal;
+
+                    System.out.println( readMessage );
+                    recDataString.append(readMessage);
+
+
+
+
+                    int initialPos = 0, finalPos;
+
+                    for (int k = 0; k < recDataString.length(); k++)
+                    {
+                        if (recDataString.charAt(k) == '^')
+                        {
+                            initialPos = k + 1;
+                            finalPos = recDataString.indexOf("@") - 1;
+                            stringVal = recDataString.substring(initialPos, finalPos);
+                            pitch = Float.parseFloat(stringVal);
+
+                            System.out.println( k );
+                        }
+                        else if (recDataString.charAt(k) == '@')
+                        {
+                            initialPos = k + 1;
+                            finalPos = recDataString.indexOf("#") - 1;
+                            stringVal = recDataString.substring(initialPos, finalPos);
+                            roll = Float.parseFloat(stringVal);
+                        }
+                    }
+
+                    recDataString.delete(0,recDataString.length());
+                }
+
                 recDataString.delete(0, recDataString.length());
             }
         };
@@ -381,7 +421,12 @@ public class DisplaySensors extends AppCompatActivity
             public void onClick(View v )
             {
                 Toast.makeText(DisplaySensors.this, " You Selected 3D Viewer!", Toast.LENGTH_SHORT).show();
-
+//
+//            } else if (radioChosen == salt) {
+//            datachosen = "5";
+//            mConnectedThread.write(datachosen.getBytes());
+                datachosen = "6";
+                mConnectedThread.write(datachosen.getBytes());
                 Intent intent = new Intent(DisplaySensors.this, Obj3DView.class);
                 startActivity(intent);
             }
@@ -502,7 +547,7 @@ public class DisplaySensors extends AppCompatActivity
         public void run()
         {
 
-            Looper.prepare();
+            //Looper.prepare();
 
             byte[] buffer = new byte[1024];
             int begin = 0;
@@ -540,6 +585,10 @@ public class DisplaySensors extends AppCompatActivity
                             {
                                 handlerType = 4;
                             }
+                            else if(buffer[i] == "^".getBytes()[0])
+                            {
+                                handlerType = 5;
+                            }
 
                             System.out.println( handlerType );
 
@@ -573,7 +622,7 @@ public class DisplaySensors extends AppCompatActivity
                 }
             }
 
-            Looper.loop();
+            //Looper.loop();
 
         }
 

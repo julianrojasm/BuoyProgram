@@ -5,32 +5,32 @@
     density="xxhdpi"
     format="8"
     plugin-version="2.2.2"
-    timestamp="69660110580046"
-    token="-1728188866052591902"
+    timestamp="58971299917384"
+    token="3961312495869884562"
     verifier="FULL_BUILD_REQUESTED" >
 
     <task
         name="javac"
-        duration="1514" />
+        duration="201" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="483" />
+        duration="50" />
     <task
         name="verifier"
-        duration="68" />
+        duration="8" />
 
     <artifact
-        location="/Users/Julian/Downloads/bluetoothAndroid/app/build/outputs/apk/app-debug.apk"
+        location="C:\Users\Julian\Desktop\BuoyProgram\app\build\outputs\apk\app-debug.apk"
         type="MAIN" />
 
     <build
-        timestamp="69660110580046"
+        timestamp="58971299917384"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
-            location="/Users/Julian/Downloads/bluetoothAndroid/app/build/outputs/apk/app-debug.apk"
+            location="C:\Users\Julian\Desktop\BuoyProgram\app\build\outputs\apk\app-debug.apk"
             type="MAIN" />
     </build>
 

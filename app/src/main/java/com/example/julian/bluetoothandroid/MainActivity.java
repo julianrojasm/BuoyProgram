@@ -228,14 +228,6 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-//    public void sendData(String caseNumber)
-//    {
-//        mConnectedThread.write(caseNumber.getBytes());
-//    }
-
-
-
-
 
 
 

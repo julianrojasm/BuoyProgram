@@ -1,4 +1,4 @@
-#Tue Nov 22 13:27:04 EST 2016
-base.0=/Users/Julian/Downloads/bluetoothAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/1f/main
+#Wed Nov 23 01:12:23 EST 2016
+base.0=C\:\\Users\\Julian\\Desktop\\BuoyProgram\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\1f\\main
 renamed.0=classes.dex
-file.0=/Users/Julian/Downloads/bluetoothAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/1f/main/classes.dex
+file.0=C\:\\Users\\Julian\\Desktop\\BuoyProgram\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\1f\\main\\classes.dex

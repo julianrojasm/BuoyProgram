@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/BuoyProgram.iml" filepath="$PROJECT_DIR$/BuoyProgram.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/bluetoothAndroid.iml" filepath="$PROJECT_DIR$/bluetoothAndroid.iml" />
     </modules>
   </component>
 </project>
