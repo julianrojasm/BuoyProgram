@@ -5,29 +5,29 @@
     density="xxhdpi"
     format="8"
     plugin-version="2.2.2"
-    timestamp="58971299917384"
+    timestamp="348438065290736"
     token="3961312495869884562"
     verifier="FULL_BUILD_REQUESTED" >
 
     <task
         name="javac"
-        duration="201" />
+        duration="280" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="50" />
+        duration="117" />
     <task
         name="verifier"
-        duration="8" />
+        duration="20" />
 
     <artifact
         location="C:\Users\Julian\Desktop\BuoyProgram\app\build\outputs\apk\app-debug.apk"
         type="MAIN" />
 
     <build
-        timestamp="58971299917384"
+        timestamp="348438065290736"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
             location="C:\Users\Julian\Desktop\BuoyProgram\app\build\outputs\apk\app-debug.apk"

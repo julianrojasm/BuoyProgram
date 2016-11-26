@@ -40,6 +40,7 @@ public class DisplaySensors extends AppCompatActivity
     Button viewer3D;
 
     private StringBuilder recDataString = new StringBuilder();
+    private StringBuilder outString = new StringBuilder();
     final int handlerStateAir = 0;
     final int handlerStateWater = 1;
     final int handlerStateSpeed = 2;
@@ -90,7 +91,9 @@ public class DisplaySensors extends AppCompatActivity
                     if (endOfLineIndex > 0 )
                     {
                         System.out.println( readMessage );
-                        airTemp.setText(recDataString.substring(recDataString.indexOf("?") + 1 ,recDataString.indexOf("#")-1));
+                        outString.append( recDataString.substring(recDataString.indexOf("?") + 1 ,recDataString.indexOf("#") - 1 ) );
+                        outString.append("°C");
+                        airTemp.setText(outString);
 
                     }
                 }
@@ -103,8 +106,9 @@ public class DisplaySensors extends AppCompatActivity
                     int endOfLineIndex = recDataString.indexOf("#");
                     if (endOfLineIndex > 0 )
                     {
-                       waterTemp.setText(recDataString.substring(recDataString.indexOf("!") + 1 ,recDataString.indexOf("#")-1));
-
+                        outString.append( recDataString.substring(recDataString.indexOf("!") + 1 ,recDataString.indexOf("#") - 1 ) );
+                        outString.append("°C");
+                        waterTemp.setText(outString);
                     }
                 }
                 else if (msg.what == handlerStateSpeed)
@@ -115,8 +119,9 @@ public class DisplaySensors extends AppCompatActivity
                     int endOfLineIndex = recDataString.indexOf("#");
                     if (endOfLineIndex > 0 )
                     {
-                        airSpeed.setText(recDataString.substring(recDataString.indexOf("*") + 1 ,recDataString.indexOf("#")- 1));
-
+                        outString.append( recDataString.substring(recDataString.indexOf("*") + 1 ,recDataString.indexOf("#") - 1 ) );
+                        outString.append("mph");
+                        airSpeed.setText(outString);
                     }
                 }
                 else if (msg.what == handlerStateSalinity)
@@ -186,9 +191,11 @@ public class DisplaySensors extends AppCompatActivity
                     double totalTime = 32;
 
                     recDataString.delete(0, recDataString.length());
-                    recDataString.append(calculateHeight(waveAccelerations, totalTime));
+                    //recDataString.append(calculateHeight(waveAccelerations, totalTime));
 
-                        waveHeight.setText(recDataString);
+                    outString.append(calculateHeight(waveAccelerations, totalTime));
+                    outString.append("m");
+                        waveHeight.setText(outString);
                 }
 
                 if (msg.what == handlerRotation) {
@@ -228,6 +235,7 @@ public class DisplaySensors extends AppCompatActivity
                 }
 
                 recDataString.delete(0, recDataString.length());
+                outString.delete(0, outString.length());
             }
         };
 
