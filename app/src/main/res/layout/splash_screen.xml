@@ -7,6 +7,6 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:src="@drawable/daniel"
+        android:src="@drawable/buoysplash"
         android:id="@+id/imageView2" />
 </LinearLayout>

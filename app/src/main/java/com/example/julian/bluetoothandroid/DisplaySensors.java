@@ -11,6 +11,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
@@ -36,6 +37,8 @@ public class DisplaySensors extends AppCompatActivity
     TextView airTemp, waterTemp, airSpeed, salinity, waveHeight;
     RadioButton air, water, speed, salt, wave, radioChosen;
     RadioGroup radioGroup;
+    ImageButton battery;
+    TextView batteryText;
 
     Button viewer3D;
 
@@ -47,6 +50,7 @@ public class DisplaySensors extends AppCompatActivity
     final int handlerStateSalinity = 3;
     final int handlerStateWave = 4;
     final int handlerRotation= 5;
+    final int handlerBattery = 6;
     public static Handler bluetoothIn;
     private static final UUID MY_UUID = UUID.fromString("00001101-0000-1000-8000-00805f9b34fb");
 
@@ -92,7 +96,7 @@ public class DisplaySensors extends AppCompatActivity
                     {
                         System.out.println( readMessage );
                         outString.append( recDataString.substring(recDataString.indexOf("?") + 1 ,recDataString.indexOf("#") - 1 ) );
-                        outString.append("°C");
+                        outString.append("°F");
                         airTemp.setText(outString);
 
                     }
@@ -107,7 +111,7 @@ public class DisplaySensors extends AppCompatActivity
                     if (endOfLineIndex > 0 )
                     {
                         outString.append( recDataString.substring(recDataString.indexOf("!") + 1 ,recDataString.indexOf("#") - 1 ) );
-                        outString.append("°C");
+                        outString.append("°F");
                         waterTemp.setText(outString);
                     }
                 }
@@ -137,13 +141,7 @@ public class DisplaySensors extends AppCompatActivity
 
                     System.out.println( voltageValue );
 
-                    //saltLevel = mapToSalt(voltageValue);
-
-                    //System.out.println( saltLevel );
-
-                    //recDataString.append(Integer.toString(saltLevel));
-                    //salinity.setText(recDataString);
-                    if (voltageValue < .54)
+                    if (voltageValue < .31)
                     {
                         recDataString.append("There Is Salt!");
                     }
@@ -233,6 +231,41 @@ public class DisplaySensors extends AppCompatActivity
 
                     recDataString.delete(0,recDataString.length());
                 }
+
+
+                else if (msg.what == handlerBattery)
+                {
+
+                    String readMessage = new String(writeBuff);
+                    System.out.println( readMessage );
+
+                    String stringVal = readMessage.substring(readMessage.indexOf("~") + 1, readMessage.indexOf("#"));
+                    System.out.println( stringVal );
+
+                    float batteryVoltage;
+                    batteryVoltage = Float.parseFloat(stringVal);
+
+                    float percent= ( ( batteryVoltage / 4.2f ) * 100 );
+
+
+                    System.out.println( batteryVoltage );
+                    System.out.println( percent );
+
+                    recDataString.append( Float.toString(percent) );
+
+                    batteryText.setText(recDataString);
+                    batteryText.setVisibility(View.VISIBLE);
+
+
+//                    try {
+//                        Thread.sleep(3000);
+//                    } catch (InterruptedException e) {
+//                        e.printStackTrace();
+//                    }
+
+//                    batteryText.setVisibility(View.GONE);
+                }
+
 
                 recDataString.delete(0, recDataString.length());
                 outString.delete(0, outString.length());
@@ -390,6 +423,11 @@ public class DisplaySensors extends AppCompatActivity
         wave = (RadioButton) findViewById(R.id.radioWave);
         radioGroup = (RadioGroup) findViewById(R.id.sensorOptions);
 
+        battery = (ImageButton) findViewById(R.id.imageButton);
+        batteryText = (TextView) findViewById(R.id.textViewBattery);
+        batteryText.setVisibility(View.GONE);
+
+
         viewer3D = (Button) findViewById(R.id.view3D);
 
 
@@ -437,6 +475,26 @@ public class DisplaySensors extends AppCompatActivity
                 mConnectedThread.write(datachosen.getBytes());
                 Intent intent = new Intent(DisplaySensors.this, Obj3DView.class);
                 startActivity(intent);
+            }
+        });
+
+
+        battery.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v )
+            {
+
+                datachosen = "7";
+                mConnectedThread.write(datachosen.getBytes());
+
+
+                try {
+                    Thread.sleep(200);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+
             }
         });
 
@@ -550,6 +608,8 @@ public class DisplaySensors extends AppCompatActivity
 //        handlerStateSpeed = 2;            "*"
 //        handlerStateSalinity = 3;         "%"
 //        handlerStateWave = 4;             "$"
+//        Rotation = 5;                     "^"
+//        Battery = 6;                      "~"
 
 
         public void run()
@@ -596,6 +656,10 @@ public class DisplaySensors extends AppCompatActivity
                             else if(buffer[i] == "^".getBytes()[0])
                             {
                                 handlerType = 5;
+                            }
+                            else if (buffer[i] == "~".getBytes()[0])
+                            {
+                                handlerType = 6;
                             }
 
                             System.out.println( handlerType );
